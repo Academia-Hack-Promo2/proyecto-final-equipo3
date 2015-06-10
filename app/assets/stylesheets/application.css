@@ -12,10 +12,8 @@
 
  *=require twitter-bootstrap-static/fontawesome
  *=require twitter-bootstrap-static/bootstrap
- *= require_tree .
  *= require_self
  # app/assets/stylesheets/application.css
  *= require formtastic-bootstrap
  *= require AdminLTE.css
- *= require mystyle.css
  */
