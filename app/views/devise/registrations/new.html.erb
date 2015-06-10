@@ -1,0 +1,60 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="register-page">
+      <header class="main-header">
+        <nav class="navbar navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand"><b>Hack Invoice</b></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><%= link_to 'Iniciar sesion', new_user_session_path %></li>
+                        <li class="active"><%= link_to 'Registrar', new_user_registration_path, class: 'active' %></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+              <div class="container">
+              <small><%= devise_error_messages! %></small>
+          </div>
+    <div class="register-box">
+        <div class="register-logo">
+        <%= image_tag("full-logo-aeb6cec9ca9eee43393c56f9d220e49c.png")%>
+        </div>
+        <div class="register-box-body">
+            <p class="login-box-msg">Register a new membership</p>
+            <form action="../../index.html" method="post">
+                <div class="form-group has-feedback">
+                    <%= f.email_field :email, autofocus: true, placeholder: 'Email', class: 'form-control'%>
+                      <%= content_tag(:i, "", :class => "form-control-feedback fa fa-envelope") %>
+                </div>
+                <div class="form-group has-feedback text-center">
+                    <% if @minimum_password_length %>
+                        <em >(<%= @minimum_password_length %> characters minimum)</em>
+                       <% end %>
+                       <br>
+                    <%= f.password_field :password, autocomplete: "off", placeholder: 'Contraseña', class: ' fa fa-rocket form-control' %> 
+                    <%= content_tag(:i, "", :class => "form-control-feedback fa fa-lock move_icon_pass") %>
+                </div>
+                <div class="form-group has-feedback">
+                    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Repetir contraseña', class: 'form-control'  %>
+                  <%= content_tag(:i, "", :class => "form-control-feedback fa fa-lock") %>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 col-md-6 btn-center">
+                        <%= f.submit "Registrar", class: 'btn btn-primary btn-block btn-flat' %>
+                        <%= content_tag(:i, "", :class => 'form-control-feedback fa fa-user-plus icon-out') %>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form> 
+            <%= render "devise/shared/links" %>
+        </div>
+        <!-- /.form-box -->
+    </div>
+</div>
+<% end %>

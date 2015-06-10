@@ -1,0 +1,61 @@
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="login-page">
+      <header class="main-header">
+        <nav class="navbar navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand"><b>Hack Invoice</b></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><%= link_to 'Iniciar sesion', new_user_session_path %></li>
+                        <li><%= link_to 'Registrar', new_user_registration_path %></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    <div class="login-box">
+        <div class="login-logo">
+        <%= image_tag("full-logo-aeb6cec9ca9eee43393c56f9d220e49c.png")%>
+        </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+            <form action="../../index2.html" method="post">
+                <div class="form-group has-feedback">
+                    <%= f.email_field :email, placeholder: 'Email', autofocus: true, class: 'form-control' %>
+                    <%= content_tag(:i, "", :class => 'form-control-feedback fa fa-envelope') %>
+                </div>
+                <div class="form-group has-feedback">
+                    <%= f.password_field :password, autocomplete: "off", placeholder: 'Contraseña', class: 'form-control' %>
+                    <%= content_tag(:i, "", :class => 'form-control-feedback fa fa-lock') %>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8 col-md-6">
+                            <label>
+                              <% if devise_mapping.rememberable? -%>
+                                   <%= f.check_box :remember_me %>
+                                    <%= f.label :recuerdame %>
+                              <% end -%>
+                            </label>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-xs-4 col-md-6">
+                        <%= f.submit "Iniciar Sesion", class: 'btn btn-primary btn-block btn-flat' %>
+                        <%= content_tag(:i, "", :class => 'form-control-feedback fa fa-sign-in icon-sign') %>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+            <!-- /.social-auth-links -->
+<%= render "devise/shared/links" %>
+        </div>
+        <!-- /.login-box-body -->
+    </div>
+</div>
+<% end %>

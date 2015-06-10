@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  alias: MyString
+  rif_ci: MyString
+  fiscal_address: 1
+  comercial_address: 1
+  phone: MyString
+  email: MyString
+  type: 
+  active: false
+
+two:
+  name: MyString
+  alias: MyString
+  rif_ci: MyString
+  fiscal_address: 1
+  comercial_address: 1
+  phone: MyString
+  email: MyString
+  type: 
+  active: false

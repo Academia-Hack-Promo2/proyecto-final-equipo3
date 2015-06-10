@@ -1,0 +1,55 @@
+@import url(http://fonts.googleapis.com/css?family=Coda);
+.main-header>.navbar{
+	margin-left: 0px;
+	background-color: #3c8dbc;
+	  padding-top: 10px;
+  	height: 75px;
+}
+
+.main-header .navbar-brand {
+   color: #fff;
+   font-family: 'Coda', cursive;
+   font-size: 26px;
+}
+
+.login-page, .register-page{
+	background-color: #fff;
+}
+
+.login-box-body, .register-box-body {
+		background-color: #eee;
+		margin-top: -10px;
+}
+
+.login-logo, .register-logo{
+	margin-top: -50px;
+}
+
+.nav>li>a {
+	color:#fff;
+	font-size: 15px;
+	   font-family: 'Coda', cursive;
+}
+
+.btn-center{
+	margin-left: 90px;
+}
+
+.move_icon_pass{
+	margin-top: 20px;
+}
+
+li.active > a {
+  color: #000;
+  background: #fff;
+}
+
+.icon-sign{
+	color: #fff;
+	margin-right: 20px;
+}
+
+.icon-out{
+	color: #fff;
+	margin-right: 20px;
+}
