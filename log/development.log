@@ -3674,3 +3674,1027 @@ Processing by ClientsController#index as HTML
   [1m[36mClient Load (0.4ms)[0m  [1mSELECT `clients`.* FROM `clients`[0m
   Rendered clients/index.html.erb within layouts/application (19.6ms)
 Completed 200 OK in 160ms (Views: 159.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-06-11 12:37:38 -0430
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (194.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 729ms (ActiveRecord: 194.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 12:37:46 -0430
+Processing by HomeController#views as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (495.2ms)
+Completed 200 OK in 2505ms (Views: 2502.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-06-11 12:38:24 -0430
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pdj1QhrhiIzRidGaaWvl7qaTNJZKOZ7QKdY8S0ewXLKGgRL6SRhqS0XVuF/5QYX+pQm8PmdR8RiEqfCkKPYntw=="}
+  [1m[35mUser Load (8.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 12:38:24 -0430
+Processing by HomeController#views as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-11 12:38:24 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (180.1ms)
+Completed 200 OK in 634ms (Views: 632.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2015-06-11 12:44:21 -0430
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (72.3ms)
+Completed 200 OK in 279ms (Views: 277.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2015-06-11 12:44:35 -0430
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 247ms (Views: 245.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/mystyle.self-194934956c0267467bbba5bca6d1e591f20e7edbebfcabd20766762fe78517d8.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/assets/full-logo-aeb6cec9ca9eee43393c56f9d220e49c-5d4efdee4b52b68130f1d91fe2cb2ac54f46e55009b868b489bbbc976195c1e3.png" for 127.0.0.1 at 2015-06-11 12:44:36 -0430
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 141ms (Views: 140.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/mystyle.self-194934956c0267467bbba5bca6d1e591f20e7edbebfcabd20766762fe78517d8.css?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/assets/full-logo-aeb6cec9ca9eee43393c56f9d220e49c-5d4efdee4b52b68130f1d91fe2cb2ac54f46e55009b868b489bbbc976195c1e3.png" for 127.0.0.1 at 2015-06-11 12:44:58 -0430
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2015-06-11 12:45:19 -0430
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 204ms (Views: 202.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:19 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:19 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/mystyle.self-194934956c0267467bbba5bca6d1e591f20e7edbebfcabd20766762fe78517d8.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/assets/full-logo-aeb6cec9ca9eee43393c56f9d220e49c-5d4efdee4b52b68130f1d91fe2cb2ac54f46e55009b868b489bbbc976195c1e3.png" for 127.0.0.1 at 2015-06-11 12:45:20 -0430
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2015-06-11 12:45:38 -0430
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 245ms (Views: 243.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:38 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:38 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:38 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:38 -0430
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:38 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:38 -0430
+
+
+Started GET "/assets/mystyle.self-194934956c0267467bbba5bca6d1e591f20e7edbebfcabd20766762fe78517d8.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:38 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:38 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:38 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:38 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/assets/full-logo-aeb6cec9ca9eee43393c56f9d220e49c-5d4efdee4b52b68130f1d91fe2cb2ac54f46e55009b868b489bbbc976195c1e3.png" for 127.0.0.1 at 2015-06-11 12:45:39 -0430
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2015-06-11 12:45:48 -0430
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 172ms (Views: 171.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/mystyle.self-194934956c0267467bbba5bca6d1e591f20e7edbebfcabd20766762fe78517d8.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/assets/full-logo-aeb6cec9ca9eee43393c56f9d220e49c-5d4efdee4b52b68130f1d91fe2cb2ac54f46e55009b868b489bbbc976195c1e3.png" for 127.0.0.1 at 2015-06-11 12:45:49 -0430
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2015-06-11 12:45:59 -0430
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/passwords/edit.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 170ms (Views: 169.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:59 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:59 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:59 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:59 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:59 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:59 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:59 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:45:59 -0430
+
+
+Started GET "/assets/mystyle.self-194934956c0267467bbba5bca6d1e591f20e7edbebfcabd20766762fe78517d8.css?body=1" for 127.0.0.1 at 2015-06-11 12:45:59 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/assets/full-logo-aeb6cec9ca9eee43393c56f9d220e49c-5d4efdee4b52b68130f1d91fe2cb2ac54f46e55009b868b489bbbc976195c1e3.png" for 127.0.0.1 at 2015-06-11 12:46:00 -0430
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2015-06-11 12:46:18 -0430
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/passwords/edit.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 179ms (Views: 177.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/mystyle.self-194934956c0267467bbba5bca6d1e591f20e7edbebfcabd20766762fe78517d8.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/assets/full-logo-aeb6cec9ca9eee43393c56f9d220e49c-5d4efdee4b52b68130f1d91fe2cb2ac54f46e55009b868b489bbbc976195c1e3.png" for 127.0.0.1 at 2015-06-11 12:46:19 -0430
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2015-06-11 12:46:41 -0430
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/passwords/edit.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 341ms (Views: 339.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:42 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:42 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:42 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/mystyle.self-194934956c0267467bbba5bca6d1e591f20e7edbebfcabd20766762fe78517d8.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/assets/full-logo-aeb6cec9ca9eee43393c56f9d220e49c-5d4efdee4b52b68130f1d91fe2cb2ac54f46e55009b868b489bbbc976195c1e3.png" for 127.0.0.1 at 2015-06-11 12:46:43 -0430
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2015-06-11 12:46:48 -0430
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/passwords/edit.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 869ms (Views: 759.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/mystyle.self-194934956c0267467bbba5bca6d1e591f20e7edbebfcabd20766762fe78517d8.css?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started GET "/assets/full-logo-aeb6cec9ca9eee43393c56f9d220e49c-5d4efdee4b52b68130f1d91fe2cb2ac54f46e55009b868b489bbbc976195c1e3.png" for 127.0.0.1 at 2015-06-11 12:46:49 -0430
+
+
+Started PUT "/users/password" for 127.0.0.1 at 2015-06-11 12:46:56 -0430
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cu+/G6Epja4lOIudFFbT909lNTvfMIur1jMmjasx1qHm3F3W2NMc5UdxNFc77Gq70cx4ff9lF72K7io82gob5w==", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cambiar mi contraseña"}
+  [1m[36mUser Load (837.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`reset_password_token` = '70710f62c36cb1dc9bb51e36a4432be3e535e897aead36d5777d24f7ead537c4'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered devise/passwords/edit.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 1373ms (Views: 143.7ms | ActiveRecord: 837.3ms)
+
+
+Started PUT "/users/password" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cu+/G6Epja4lOIudFFbT909lNTvfMIur1jMmjasx1qHm3F3W2NMc5UdxNFc77Gq70cx4ff9lF72K7io82gob5w==", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cambiar mi contraseña"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`reset_password_token` = '70710f62c36cb1dc9bb51e36a4432be3e535e897aead36d5777d24f7ead537c4'  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered devise/passwords/edit.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 156ms (Views: 146.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/mystyle.self-194934956c0267467bbba5bca6d1e591f20e7edbebfcabd20766762fe78517d8.css?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:30 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:31 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:31 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:31 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:31 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:31 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:31 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:31 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:31 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:47:31 -0430
+
+
+Started GET "/assets/full-logo-aeb6cec9ca9eee43393c56f9d220e49c-5d4efdee4b52b68130f1d91fe2cb2ac54f46e55009b868b489bbbc976195c1e3.png" for 127.0.0.1 at 2015-06-11 12:47:31 -0430
+
+
+Started PUT "/users/password" for 127.0.0.1 at 2015-06-11 12:47:38 -0430
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtIhYCL4XEwdWPGgts5ORht4WNSXdKTIaN5IKND3bdTi4cOtWwLNB38RTmqZdPcKhdEVkrchON40A0SZocygkg==", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cambiar mi contraseña"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`reset_password_token` = '70710f62c36cb1dc9bb51e36a4432be3e535e897aead36d5777d24f7ead537c4'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered devise/passwords/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 169ms (Views: 159.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-11 12:47:42 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 303ms (Views: 268.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2015-06-11 12:47:47 -0430
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/passwords/new.html.erb within layouts/application (77.5ms)
+Completed 200 OK in 269ms (Views: 268.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2015-06-11 12:47:50 -0430
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y01G9l/lsYlXv59XmDnCGyfb3rzhFcCxkdjOnTgcHU5ffqQ7Jh8gwjX2IJ23g3tXuXKT+sFAXKfNBcIsSSfQCA==", "user"=>{"email"=>"galindezj2@gmail.com"}, "commit"=>"Enviar"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'galindezj2@gmail.com'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`reset_password_token` = '837fa354a57bb668abc9823c6b01542b109f8da9c734f642a9dc627dd3e05d12'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (122.1ms)[0m  [1mUPDATE `users` SET `reset_password_token` = '837fa354a57bb668abc9823c6b01542b109f8da9c734f642a9dc627dd3e05d12', `reset_password_sent_at` = '2015-06-11 17:17:50', `updated_at` = '2015-06-11 17:17:50' WHERE `users`.`id` = 3[0m
+  [1m[35m (70.7ms)[0m  COMMIT
+  Rendered devise/mailer/reset_password_instructions.html.erb (1.0ms)
+
+Devise::Mailer#reset_password_instructions: processed outbound mail in 1804.0ms
+
+Sent mail to galindezj2@gmail.com (5564.4ms)
+Date: Thu, 11 Jun 2015 12:47:55 -0430
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: galindezj2@gmail.com
+Message-ID: <5579c2c3ee938_1b30265a0fe6134a@juan-VIT-P2400.mail>
+Subject: =?UTF-8?Q?Instrucciones_para_restablecer_su_contrase=C3=B1a?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello galindezj2@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=LjSBcny8zUBQhSNnZwcz">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 10711ms (ActiveRecord: 194.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-11 12:48:01 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 171ms (Views: 169.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2015-06-11 12:48:18 -0430
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/passwords/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 171ms (Views: 169.6ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/users/password" for 127.0.0.1 at 2015-06-11 12:48:25 -0430
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6mDT8ZDY5NLJJEmxs6I52KHwnuM5GgY498sCkEwnpEp+UzE86SJ1matt9nucGICUP1nTpRlPmi6rFg4hPRxpDA==", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cambiar mi contraseña"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`reset_password_token` = '837fa354a57bb668abc9823c6b01542b109f8da9c734f642a9dc627dd3e05d12'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (25.9ms)[0m  [1mUPDATE `users` SET `encrypted_password` = '$2a$10$ppb7.4Yngdb.x7Pi.UAmLeVTOHD9UZjtruFkeFdV2tHHZ4o.aZbmi', `reset_password_token` = NULL, `reset_password_sent_at` = NULL, `updated_at` = '2015-06-11 17:18:25' WHERE `users`.`id` = 3[0m
+  [1m[35m (55.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (52.2ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2015-06-11 16:57:47', `current_sign_in_at` = '2015-06-11 17:18:25', `sign_in_count` = 5, `updated_at` = '2015-06-11 17:18:25' WHERE `users`.`id` = 3
+  [1m[36m (42.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 310ms (ActiveRecord: 177.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 12:48:25 -0430
+Processing by HomeController#views as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 230ms (Views: 227.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-06-11 12:48:29 -0430
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n1fCK8P7YM8WfWzS1f6qD3O6InuhQAQP3bUt7Y2sdI4LZCDmugHxhHQ00xj6RBND7RNvPYEVmBmBaCFc/Je5yA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 12:48:29 -0430
+Processing by HomeController#views as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-11 12:48:29 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 163ms (Views: 161.9ms | ActiveRecord: 0.0ms)
