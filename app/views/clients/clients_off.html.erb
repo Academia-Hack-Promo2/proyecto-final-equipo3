@@ -1,0 +1,167 @@
+<%= stylesheet_link_tag "_all-skins.min" %>
+<%= stylesheet_link_tag "lading.css" %>
+<div class="skin-purple sidebar-mini">
+	    <div class="wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="index2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>H</b><b>I</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Hack Invoice</b></span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!-- The user image in the navbar-->
+                                 <%= image_tag("user.png", class: 'user-image')%>
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs">Romer Ramos</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+                                <li class="user-header">
+                                    <%= image_tag("user.png")%>
+                                    <p>
+                                        Romer Ramos - Web Developer
+                                        <small>Member since Nov. 2012</small>
+                                    </p>
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="text-center">
+                                        <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete %>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <%= image_tag("user.png")%>
+                    </div>
+                    <div class="pull-left info">
+                        <p>Romer Ramos</p>
+                        <!-- Status -->
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+                <!-- /.search form -->
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu">
+                    <li class="header">Menu</li>
+                    <!-- Optionally, you can add icons to the links -->
+                    <li><a href="home.html"><i class='fa fa-link'></i> <span>Home</span></a></li>
+                    <li class="active">
+                        <a href="#">
+                            <i class='fa fa-link'></i>
+                            <span>Clientes</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><%= link_to '<i class="fa fa-circle-o"></i> Clientes'.html_safe, clients_path %></li>
+                            <li><%= link_to '<i class="fa fa-circle-o"></i> Registrar Clientes'.html_safe, new_client_path %></li>
+                            <li><%= link_to '<i class="fa fa-circle-o"></i> Clientes Deshabilitados'.html_safe, clients_off_path %></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class='fa fa-link'></i>
+                            <span>Proveedores</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="proveedores.html"><i class="fa fa-circle-o"></i> Registro de Proveedores</a></li>
+                            <li><a href="proveedores_facturas.html"><i class="fa fa-circle-o"></i>Facturas de Proveedores</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="servicios.html"><i class='fa fa-link'></i> <span>Servicios</span></a></li>
+                    <li>
+                        <a href="#">
+                            <i class='fa fa-link'></i>
+                            <span>Facturas</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="facturas.html"><i class="fa fa-circle-o"></i>Facturas Puntuales</a></li>
+                            <li><a href="facturas_recurrentes.html"><i class="fa fa-circle-o"></i>Facturas Recurrentes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="reportes.html"><i class='fa fa-link'></i> <span>Reporte</span></a></li>
+                </ul>
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header text-center">
+                <h1>
+                    Clientes Deshabilitados<br>
+                    <small>Lista de todos los clientes deshabilitados</small>
+                    </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <!-- Your Page Content Here -->
+                <div class="row">
+
+                    <% @clients.each do |client| %>
+                        <% if client.active == 'Deshabilitado'%>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <div class="well well-sm well-edit"><strong><%= client.name %></strong></div>
+                        </div>
+                        <div class="well">
+                            <h5><b>RIF:</b> <%= client.rif_ci %></h5>
+                            <h5><b>Alias:</b> <%= client.alias %></h5>
+                            <h5><b>Direccion fiscal:</b> <%= client.fiscal_address %></h5>
+                            <h5><b>Direccion Comercial:</b> <%= client.comercial_address %></h5>
+                            <h5><b>Telefeno:</b> <%= client.phone %></h5>
+                            <h5><b>Correo:</b> <%= client.email %></h5>
+                            <h5><b>Tipo:</b> <%= client.type_client %></h5>
+                            <h5><b>Estado:</b> <%= client.active %></h5>
+                            <div class="text-center">
+                            </div>
+                        </div>
+                    </div>
+                        <% end %>
+                    <% end %>
+
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs">
+                Hack Invoice
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2015 <a href="#">Academia Hack Company</a>.</strong> All rights reserved.
+        </footer>
+        <!-- /.control-sidebar -->
+    </div>
+</div>

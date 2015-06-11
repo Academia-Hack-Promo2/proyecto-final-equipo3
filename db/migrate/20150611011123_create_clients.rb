@@ -8,8 +8,8 @@ class CreateClients < ActiveRecord::Migration
       t.integer :comercial_address
       t.string :phone, limit: 15
       t.string :email, limit: 40
-      t.string :type, limit: 15
-      t.boolean :active
+      t.string :type_client, limit: 15
+      t.string :active, limit: 14
 
       t.timestamps null: false
     end

@@ -1,0 +1,85 @@
+.fa-user{
+	font-size: 120px;
+	margin-left: 110px;
+	margin-top: 100px;
+
+}
+.fa-file-text{
+	font-size: 120px;
+	margin-left: 100px;
+	margin-top: 50px;
+
+}
+
+.icon-factura_recurrente{
+	font-size: 260px;
+	margin-left: 75px;
+}
+
+.icon-factura_puntual{
+	font-size: 260px;
+	margin-left: 75px;
+}
+.icon-caja_chica{
+	font-size: 260px;
+	margin-left: 85px;
+}
+
+.text-up{
+	margin-top: -30px;
+	margin-right: -30px;
+}
+
+
+.fa-th-list{
+	font-size: 120px;
+	margin-left: 100px;
+	margin-top: 50px;
+
+}
+.well-edit{
+	margin-top: 15px;
+}
+
+.modal-content{
+	width: 800px;
+}
+
+.modal-body{
+	margin-bottom: -50px;
+}
+
+.content-wrapper-2{
+ min-height: 100%;
+  background-color: #fff;
+  z-index: 800;
+}
+
+.modal-footer-edit{
+	margin-top: -30px;
+}
+
+.description{
+	margin-left: 160px;
+	width: 60%;
+}
+
+.modal-invoice{
+	margin-left: -210px;
+	width: 1100px;
+}
+
+.well-diferencia{
+	width: 380px;
+}
+
+li{
+    list-style-type:none;
+}
+
+.label{
+	display: inline-block;
+	padding: .3em .1em .3em;
+	font-size: 13px;
+	color:#333;
+}

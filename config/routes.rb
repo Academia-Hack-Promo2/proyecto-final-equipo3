@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :clients
+  get 'clients_off' => 'clients#clients_off'
   root 'home#views'
 
   # The priority is based upon order of creation: first created -> highest priority.

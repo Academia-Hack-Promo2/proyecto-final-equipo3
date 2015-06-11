@@ -8,8 +8,8 @@ one:
   comercial_address: 1
   phone: MyString
   email: MyString
-  type: 
-  active: false
+  type_client: MyString
+  active: MyString
 
 two:
   name: MyString
@@ -19,5 +19,5 @@ two:
   comercial_address: 1
   phone: MyString
   email: MyString
-  type: 
-  active: false
+  type_client: MyString
+  active: MyString
