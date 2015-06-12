@@ -4698,3 +4698,1350 @@ Processing by Devise::SessionsController#new as HTML
   Rendered devise/shared/_links.html.erb (0.4ms)
   Rendered devise/sessions/new.html.erb within layouts/application (14.2ms)
 Completed 200 OK in 163ms (Views: 161.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-06-11 12:54:48 -0430
+  [1m[36mActiveRecord::SchemaMigration Load (9.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ruLxS7nY4DvF2rK51bRPZ8V7USXx34/uFTeIT4qWkMoxllpFmAkjGdD9+V8agbWyEUj5ich5yYPpZTUMF/akEA==", "user"=>{"email"=>"john@galindez.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesion"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'john@galindez.com'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (40.2ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2015-06-11 04:58:52', `current_sign_in_at` = '2015-06-11 17:24:49', `sign_in_count` = 15, `updated_at` = '2015-06-11 17:24:49' WHERE `users`.`id` = 1
+  [1m[36m (71.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 624ms (ActiveRecord: 167.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 12:54:49 -0430
+Processing by HomeController#views as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (239.1ms)
+Completed 200 OK in 703ms (Views: 700.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/home.html" for 127.0.0.1 at 2015-06-11 12:54:59 -0430
+
+ActionController::RoutingError (No route matches [GET] "/home.html"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /home/juan/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/juan/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/juan/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (24.9ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (74.6ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (26.5ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (53.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 12:55:26 -0430
+Processing by HomeController#views as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 165ms (Views: 162.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:55:26 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:55:26 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 12:55:27 -0430
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+Processing by HomeController#views as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 175ms (Views: 173.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 12:56:34 -0430
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 12:56:35 -0430
+Processing by HomeController#views as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 145ms (Views: 143.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 12:57:20 -0430
+Processing by HomeController#views as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 140ms (Views: 137.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 12:57:20 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 12:57:21 -0430
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-06-11 12:57:24 -0430
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (37.0ms)[0m  [1mSELECT `clients`.* FROM `clients`[0m
+  Rendered clients/index.html.erb within layouts/application (91.5ms)
+Completed 200 OK in 235ms (Views: 184.4ms | ActiveRecord: 38.4ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-06-11 12:57:25 -0430
+Processing by ClientsController#new as HTML
+  Rendered clients/new.html.erb within layouts/application (380.5ms)
+Completed 200 OK in 508ms (Views: 507.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients_off" for 127.0.0.1 at 2015-06-11 12:57:27 -0430
+Processing by ClientsController#clients_off as HTML
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients`
+  Rendered clients/clients_off.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 164ms (Views: 163.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 12:57:29 -0430
+Processing by HomeController#views as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 145ms (Views: 141.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-06-11 13:11:36 -0430
+Processing by ClientsController#new as HTML
+  Rendered clients/new.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 172ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-06-11 13:20:10 -0430
+Processing by ClientsController#new as HTML
+  [1m[35mClient Load (14.3ms)[0m  SELECT `clients`.* FROM `clients`
+  Rendered clients/new.html.erb within layouts/application (177.4ms)
+Completed 200 OK in 437ms (Views: 422.4ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/lading.self-d873377eed5aa1b588f5d68b0d39cb02351ce228a76e42d1bc12a025448fd09e.css?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:11 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:12 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:12 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:12 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:12 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:12 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:12 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:12 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 13:20:12 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 13:20:12 -0430
+
+
+Started GET "/assets/fontawesome-webfont-66db52b456efe7e29cec11fa09421d03cb09e37ed1b567307ec0444fd605ce31.woff" for 127.0.0.1 at 2015-06-11 13:20:12 -0430
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+Processing by ClientsController#new as HTML
+  [1m[36m (19.3ms)[0m  [1mSELECT `clients`.`id` FROM `clients`[0m
+  Rendered clients/new.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 275ms (Views: 255.2ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/lading.self-d873377eed5aa1b588f5d68b0d39cb02351ce228a76e42d1bc12a025448fd09e.css?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:24 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:25 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 13:21:25 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 13:21:25 -0430
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-06-11 13:21:33 -0430
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (0.3ms)[0m  SELECT `clients`.* FROM `clients`
+  Rendered clients/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 175ms (Views: 174.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clients_off" for 127.0.0.1 at 2015-06-11 13:21:34 -0430
+Processing by ClientsController#clients_off as HTML
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT `clients`.* FROM `clients`[0m
+  Rendered clients/clients_off.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 183ms (Views: 182.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-06-11 13:21:36 -0430
+Processing by ClientsController#new as HTML
+  [1m[35m (0.3ms)[0m  SELECT `clients`.`id` FROM `clients`
+  Rendered clients/new.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 176ms (Views: 175.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+Processing by ClientsController#new as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT `clients`.`name` FROM `clients`[0m
+  Rendered clients/new.html.erb within layouts/application (89.7ms)
+Completed 200 OK in 246ms (Views: 244.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/lading.self-d873377eed5aa1b588f5d68b0d39cb02351ce228a76e42d1bc12a025448fd09e.css?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 13:22:06 -0430
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+Processing by ClientsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+  Rendered clients/new.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 168ms (Views: 167.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/lading.self-d873377eed5aa1b588f5d68b0d39cb02351ce228a76e42d1bc12a025448fd09e.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 13:23:25 -0430
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-06-11 13:23:50 -0430
+Processing by ClientsController#new as HTML
+  [1m[36m (230.6ms)[0m  [1mSELECT name FROM `users`[0m
+Mysql2::Error: Unknown column 'name' in 'field list': SELECT name FROM `users`
+  Rendered clients/new.html.erb within layouts/application (271.4ms)
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 230.6ms)
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'name' in 'field list': SELECT name FROM `users`):
+    155:                         <%= c.input :type_client, :input_html => { :class => 'form-control'},  :as => :select, :collection => ["Estudiante", "Sponsor", "Empresa"] %>
+    156:                         </div>
+    157:                          <div class="form-group">
+    158:                         <%= c.input :active, :input_html => { :class => 'form-control'},  :as => :select, :collection => User.pluck(:name) %>
+    159:                         </div>
+    160:                     </div>
+    161:                         <div class="form-group text-center">
+  app/views/clients/new.html.erb:158:in `block in _app_views_clients_new_html_erb__32997105__632102068'
+  app/views/clients/new.html.erb:127:in `_app_views_clients_new_html_erb__32997105__632102068'
+
+
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.7ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.0ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.8ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (41.6ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+Processing by ClientsController#new as HTML
+  [1m[35m (0.4ms)[0m  SELECT `users`.`id` FROM `users`
+  Rendered clients/new.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 176ms (Views: 175.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/lading.self-d873377eed5aa1b588f5d68b0d39cb02351ce228a76e42d1bc12a025448fd09e.css?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:58 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:59 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:59 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:59 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:59 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:59 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 13:23:59 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 13:23:59 -0430
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+Processing by ClientsController#new as HTML
+  Rendered clients/new.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 170ms (Views: 169.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/lading.self-d873377eed5aa1b588f5d68b0d39cb02351ce228a76e42d1bc12a025448fd09e.css?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 13:25:15 -0430
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-06-11 23:31:41 -0430
+  [1m[36mActiveRecord::SchemaMigration Load (40.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients`
+  Rendered clients/index.html.erb within layouts/application (393.1ms)
+Completed 200 OK in 1632ms (Views: 1591.7ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/clients_off" for 127.0.0.1 at 2015-06-11 23:31:54 -0430
+Processing by ClientsController#clients_off as HTML
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients`[0m
+  Rendered clients/clients_off.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 220ms (Views: 219.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clients_off" for 127.0.0.1 at 2015-06-11 23:32:42 -0430
+Processing by ClientsController#clients_off as HTML
+  [1m[35mClient Load (0.3ms)[0m  SELECT `clients`.* FROM `clients`
+  Rendered clients/clients_off.html.erb within layouts/application (41.3ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `count' for 1:Fixnum):
+    141:                             <h5><b>Correo:</b> <%= client.email %></h5>
+    142:                             <h5><b>Tipo:</b> <%= client.type_client %></h5>
+    143:                             <h5><b>Estado:</b> <%= client.active %></h5>
+    144:                             <h5><b>Cuenta:</b> <%= client.fiscal_address.count %></h5>
+    145:                             <div class="text-center">
+    146:                             </div>
+    147:                         </div>
+  app/views/clients/clients_off.html.erb:144:in `block in _app_views_clients_clients_off_html_erb__311905812__625465198'
+  app/views/clients/clients_off.html.erb:129:in `_app_views_clients_clients_off_html_erb__311905812__625465198'
+
+
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.4ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.1ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (22.9ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (52.3ms)
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients`[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `clients`
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients`[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT  `clients`.* FROM `clients` LIMIT 1
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients`[0m
+  Rendered clients/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 164ms (Views: 159.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/lading.self-d873377eed5aa1b588f5d68b0d39cb02351ce228a76e42d1bc12a025448fd09e.css?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 23:37:09 -0430
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 23:38:26 -0430
+Processing by HomeController#views as HTML
+  [1m[35mUser Load (23.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 298ms (Views: 189.7ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 23:38:46 -0430
+Processing by HomeController#views as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 182ms (Views: 149.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 23:39:08 -0430
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#views as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (174.9ms)
+Completed 200 OK in 393ms (Views: 355.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+Processing by HomeController#views as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 186ms (Views: 183.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 23:39:29 -0430
+
+
+Started GET "/clients_off" for 127.0.0.1 at 2015-06-11 23:40:27 -0430
+Processing by ClientsController#clients_off as HTML
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients`
+  Rendered clients/clients_off.html.erb within layouts/application (80.6ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 2.4ms)
+
+ActionView::Template::Error (undefined method `count' for 1:Fixnum):
+    140:                             <h5><b>Telefeno:</b> <%= client.phone %></h5>
+    141:                             <h5><b>Correo:</b> <%= client.email %></h5>
+    142:                             <h5><b>Tipo:</b> <%= client.type_client %></h5>
+    143:                             <h5><b>Estado:</b> <%= client.contar %></h5>
+    144:                             <div class="text-center">
+    145:                             </div>
+    146:                         </div>
+  app/models/client.rb:15:in `contar'
+  app/views/clients/clients_off.html.erb:143:in `block in _app_views_clients_clients_off_html_erb__50993317_91151700'
+  app/views/clients/clients_off.html.erb:129:in `_app_views_clients_clients_off_html_erb__50993317_91151700'
+
+
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.6ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.7ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (43.0ms)
+
+
+Started GET "/clients_off" for 127.0.0.1 at 2015-06-11 23:41:57 -0430
+Processing by ClientsController#clients_off as HTML
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients`[0m
+  Rendered clients/clients_off.html.erb within layouts/application (32.6ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 2.2ms)
+
+ActionView::Template::Error (undefined method `count' for #<Client:0x9a79654>):
+    140:                             <h5><b>Telefeno:</b> <%= client.phone %></h5>
+    141:                             <h5><b>Correo:</b> <%= client.email %></h5>
+    142:                             <h5><b>Tipo:</b> <%= client.type_client %></h5>
+    143:                             <h5><b>Estado:</b> <%= client.count %></h5>
+    144:                             <div class="text-center">
+    145:                             </div>
+    146:                         </div>
+  app/views/clients/clients_off.html.erb:143:in `block in _app_views_clients_clients_off_html_erb__50993317_88028840'
+  app/views/clients/clients_off.html.erb:129:in `_app_views_clients_clients_off_html_erb__50993317_88028840'
+
+
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.6ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.9ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/juan/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (40.5ms)
+
+
+Started GET "/clients_off" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+Processing by ClientsController#clients_off as HTML
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients`
+  Rendered clients/clients_off.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 160ms (Views: 159.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/AdminLTE.self-c40d88375bc016a7841e29ec71ea0e330188255efd732ff532a70d1f74d7ae31.css?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/formtastic-bootstrap.self-4529ae5413e4e5b566efc9d2b070c01e6911766836527b9db2c1195daa2682ec.css?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/application.self-254eb6180df661cf4f4976087b11aad5bf5ec984da057bfa6b53bdb9903c5bfb.css?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/lading.self-d873377eed5aa1b588f5d68b0d39cb02351ce228a76e42d1bc12a025448fd09e.css?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/_all-skins.min.self-9b0fdd1a4bd4df70aff96bc45a1dc7b51a87fa6d37de8eaace40db2b149e2e82.css?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/app.min.self-8a75043af53f647dc43aacc57d216a868f4232e1f82238232560af47a5c52ff5.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+
+
+Started GET "/assets/user-b5dc7ad7a79774463f70947334e2ef52a62194e479a0c0f483dccec1b272693c.png" for 127.0.0.1 at 2015-06-11 23:42:06 -0430
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT  `clients`.* FROM `clients` WHERE `clients`.`id` = 2 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  `clients`.* FROM `clients` WHERE `clients`.`id` = 5 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients`
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients`[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients`
