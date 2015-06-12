@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'clients_off' => 'clients#clients_off'
   root 'home#views'
 
+  post 'suppliers' => 'suppliers#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
