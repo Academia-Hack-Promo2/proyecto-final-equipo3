@@ -27,7 +27,7 @@
                                 <!-- The user image in the navbar-->
                                  <%= image_tag("user.png", class: 'user-image')%>
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                <span class="hidden-xs">Romer Ramos</span>
+                                <span class="hidden-xs"><%= current_user.username %></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- The user image in the menu -->
@@ -60,7 +60,7 @@
                         <%= image_tag("user.png")%>
                     </div>
                     <div class="pull-left info">
-                        <p>Romer Ramos</p>
+                        <p><%= current_user.username %></p>
                         <!-- Status -->
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>

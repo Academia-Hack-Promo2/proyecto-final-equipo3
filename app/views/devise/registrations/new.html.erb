@@ -30,6 +30,10 @@
             <p class="login-box-msg">Register a new membership</p>
             <form action="../../index.html" method="post">
                 <div class="form-group has-feedback">
+                    <%= f.text_field :username, autofocus: true, placeholder: 'Name', class: 'form-control'%>
+                      <%= content_tag(:i, "", :class => "form-control-feedback fa fa-user") %>
+                </div>
+                <div class="form-group has-feedback">
                     <%= f.email_field :email, autofocus: true, placeholder: 'Email', class: 'form-control'%>
                       <%= content_tag(:i, "", :class => "form-control-feedback fa fa-envelope") %>
                 </div>

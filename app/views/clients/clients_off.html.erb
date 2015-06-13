@@ -27,14 +27,14 @@
                                 <!-- The user image in the navbar-->
                                  <%= image_tag("user.png", class: 'user-image')%>
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                <span class="hidden-xs">Romer Ramos</span>
+                                <span class="hidden-xs"><%= current_user.username %></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- The user image in the menu -->
                                 <li class="user-header">
                                     <%= image_tag("user.png")%>
                                     <p>
-                                        Romer Ramos - Web Developer
+                                        Hack Invoice - Sistema de Facturacion
                                         <small>Member since Nov. 2012</small>
                                     </p>
                                 </li>
@@ -60,7 +60,7 @@
                         <%= image_tag("user.png")%>
                     </div>
                     <div class="pull-left info">
-                        <p>Romer Ramos</p>
+                        <p><%= current_user.username %></p>
                         <!-- Status -->
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
@@ -90,7 +90,7 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="proveedores.html"><i class="fa fa-circle-o"></i> Registro de Proveedores</a></li>
+                            <li><%= link_to '<i class="fa fa-circle-o"></i> Proveedores'.html_safe, new_supplier_path %></li>
                             <li><a href="proveedores_facturas.html"><i class="fa fa-circle-o"></i>Facturas de Proveedores</a></li>
                         </ul>
                     </li>

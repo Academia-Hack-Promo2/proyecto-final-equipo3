@@ -1,7 +1,7 @@
 class Client < ActiveRecord::Base
   validates :name, :alias, :rif_ci, :fiscal_address, :phone, :email, :type_client, :active, presence: true
   validates :alias, :email, :rif_ci, uniqueness: true
-  validates :fiscal_address, :comercial_address, :phone, numericality: true
+  validates :fiscal_address, :comercial_address, numericality: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
   validates :name, length: { maximum: 70 }
   validates :alias, length: { maximum: 20 }

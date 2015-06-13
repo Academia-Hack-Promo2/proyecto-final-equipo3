@@ -34,8 +34,7 @@
                                 <li class="user-header">
                                     <%= image_tag("user.png")%>
                                     <p>
-                                        Hack Invoice - Sistema de Facturacion
-                                        <small>Member since Nov. 2012</small>
+                                        Hack Invoice - Sistema de facturacion
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
@@ -71,7 +70,7 @@
                     <li class="header">Menu</li>
                     <!-- Optionally, you can add icons to the links -->
                      <li><%= link_to '<i class="fa fa-link"></i> Home'.html_safe, root_path %></li>
-                    <li class="active">
+                    <li>
                         <a href="#">
                             <i class='fa fa-link'></i>
                             <span>Clientes</span>
@@ -83,14 +82,14 @@
                             <li><%= link_to '<i class="fa fa-circle-o"></i> Clientes Deshabilitados'.html_safe, clients_off_path %></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="#">
                             <i class='fa fa-link'></i>
                             <span>Proveedores</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="proveedores.html"><i class="fa fa-circle-o"></i> Registro de Proveedores</a></li>
+                            <li><%= link_to '<i class="fa fa-circle-o"></i> Registrar Proveedores'.html_safe, new_supplier_path %></li>
                             <li><a href="proveedores_facturas.html"><i class="fa fa-circle-o"></i>Facturas de Proveedores</a></li>
                         </ul>
                     </li>
@@ -117,49 +116,48 @@
             <!-- Content Header (Page header) -->
             <section class="content-header text-center">
                 <h1>
-                Editar a : <%= @client.name %><br>
-                <small>Aqui podra registrar a un cliente</small>
+                Nuevo Proveedor<br>
+                <small>Aqui podra registrar a un proveedor</small>
                 </h1>
             </section>
             <!-- Main content -->
             <section class="content">
                 <!-- Your Page Content Here -->
-                <%= semantic_form_for @client do |c| %>
+                <%= semantic_form_for @supplier do |s| %>
                 <form>
                     <br>
-                    <div class="col-md-6">
+                        
+                    <div class="row">
+                                        <div class="col-md-6">
                         <div class="form-group">
-                            <%= c.input :name, :input_html => { :class => 'form-control'}, placeholder: 'John Galindez',:label => "Nombre:"%> 
+                            <%= s.input :name, :input_html => { :class => 'form-control'}, placeholder: 'John Galindez',:label => "Nombre:"%> 
                         </div>
                         <div class="form-group">
-                            <%= c.input :alias, :input_html => { :class => 'form-control'}, placeholder: 'Empresas Solucion Estadistica',:label => "Alias:"%>
+                            <%= s.input :alias, :input_html => { :class => 'form-control'}, placeholder: 'Empresas Solucion Estadistica',:label => "Alias:"%>
                         </div>
                         <div class="form-group">
-                            <%= c.input :rif_ci, :input_html => { :class => 'form-control'}, placeholder: 'J-3453',:label => "RIF-CI:"%>
-                        </div>
-                        <div class="form-group">
-                            <%= c.input :fiscal_address, :input_html => { :class => 'form-control'}, placeholder: '2',:label => "Direccion Fiscal:"%>
+                            <%= s.input :rif, :input_html => { :class => 'form-control'}, placeholder: 'J-3453',:label => "RIF:"%>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-group">
-                             <%= c.input :comercial_address, :input_html => { :class => 'form-control'}, placeholder: '2',:label => "Direccion Comercial:"%>
-                        </div>
-                        <div class="form-group">
-                            <%= c.input :phone, :input_html => { :class => 'form-control'}, placeholder: '0412-456-32-45',:label => "Telefono:"%>
-                        </div>
-                        <div class="form-group">
-                            <%= c.input :email, :input_html => { :class => 'form-control'}, placeholder: 'galindezj2@gmail.com',:label => "Email:" %>
-                        </div>
-                        <div class="form-group">
-                        <%= c.input :type_client, :input_html => { :class => 'form-control'},  :as => :select, :collection => ["Estudiante", "Sponsor", "Empresa"] %>
-                        </div>
                          <div class="form-group">
-                        <%= c.input :active, :input_html => { :class => 'form-control'},  :as => :select, :collection => ["Habilitado", "Deshabilitado"] %>
+                            <%= s.input :fiscal_address, :input_html => { :class => 'form-control'}, placeholder: '2',:label => "Direccion Fiscal:"%>
+                        </div>
+                        <div class="form-group">
+                             <%= s.input :comercial_address, :input_html => { :class => 'form-control'}, placeholder: '2',:label => "Direccion Comercial:"%>
+                        </div>
+                        <div class="form-group">
+                            <%= s.input :phone, :input_html => { :class => 'form-control'}, placeholder: '0412-456-32-45',:label => "Telefono:"%>
+                        </div>
+                    </div>
+                        <div class="col-md-6 col-md-offset-3 text-center">
+                            <div class="form-group">
+                            <%= s.input :email, :input_html => { :class => 'form-control'}, placeholder: 'galindezj2@gmail.com',:label => "Email:" %>
+                             </div>
                         </div>
                     </div>
                         <div class="form-group text-center">
-                        <%= c.submit 'Registrar Cliente', :class => 'btn btn-primary'%>
+                        <%= s.submit 'Registrar Proveedor', :class => 'btn btn-primary'%>
                         </div>
                 </form>
                   <% end %>

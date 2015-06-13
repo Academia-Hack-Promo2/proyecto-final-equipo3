@@ -1,40 +1,25 @@
 class SuppliersController < ApplicationController
-	def create
-    supplier = Supplier.new(permit)
-    if supplier.valid? 
-      supplier.save
-      render json: supplier
+	  
+  def index
+    @supplier = Supplier.all
+  end
+
+  def new
+    @supplier = Supplier.new
+  end
+
+  def create
+    @supplier = Supplier.new(permit_params)
+    if @supplier.save
+      render supplier_new_path
     else
-      render json: supplier.errors
+      render 'new'
     end
   end 
 
-  def update
-    if Supplier.exist?(params[:id])
-      a = Supplier.find(params[:id])
-      a = Supplier.update
-      render json: Valid
-    else
-      render json: {"mensaje" => "No se actualizo"}
-    end
-  end
-
-  def index
-    if Supplier.all
-      supplier = Supplier.all
-      render json: supplier
-    else
-      render json: {"Mensaje" => "No tiene aun proveedores en su lista"}
-    end
-  end
-
-  #def delete
-   # if Supplier.exist?(paramas[:id])
-
-  #end
   private
   
-  def permit
-    params.permit(:name, :alias, :rif, :fiscal_address, :comercial_address, :phone, :email)
+  def permit_params
+    params.require(:supplier).permit(:name, :alias, :rif, :fiscal_address, :comercial_address, :phone, :email, :active)
   end
 end
